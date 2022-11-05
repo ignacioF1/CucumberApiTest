@@ -1,19 +1,3 @@
 
-9
-	Readme.md,0\c\0c1945d7443c2e154bd3e421c0d438bd4086d8c3
 O
 src/main/java/project/Main.java,2\f\2f61cc679b7bac6c41274f18baa73f2d72b9bef1
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-c
-3src/test/java/swaggerApiTestSteps/GetOperation.java,7\1\71ecd3c6b2c59a3e8570f364dea0898ab2e82b95
-d
-4src/test/java/swaggerApiTestSteps/PostOperation.java,1\9\19cc8ff88969cfc54a8db6e19d6e83f4b1b4faee
-c
-3src/test/java/swaggerApiTestSteps/PutOperation.java,3\6\3654876e25bc971fc6d6c2bf1a3625f5a7350670
-f
-6src/test/java/swaggerApiTestSteps/DeleteOperation.java,b\2\b2bda3908a7c21b2982b1bcdb6171f4da6213ae8
-T
-$src/test/java/auxiliary/TestPet.java,6\7\67010632e45778479720200651ab42a805977c53
-V
-&src/test/java/constants/Constants.java,2\3\2376dfb0ff3e2232cce9acd58be68ab5ac151d4e

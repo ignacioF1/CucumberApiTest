@@ -14,9 +14,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 import org.testng.Assert;
 
-public class PostOperation{
+public class PostOperation {
 
     private int responseStatus;
     private String responseBody;
@@ -43,7 +44,7 @@ public class PostOperation{
         httpURLConnection.setRequestMethod("POST");
         httpURLConnection.setRequestProperty("Content-Type", "application/json");
         httpURLConnection.setRequestProperty("Accept", "application/json");
-        String jsonInputString = String.format(JSON_POST,petId,petName);
+        String jsonInputString = String.format(JSON_POST, petId, petName);
         DataOutputStream out = new DataOutputStream(httpURLConnection.getOutputStream());
         out.writeBytes(jsonInputString);
         out.flush();
@@ -63,10 +64,11 @@ public class PostOperation{
     }
 
     @Then("assert the response contains the added pet and a {int} is received")
-    public void assertTheNewPetWasCorrectlyAddedToTheStore(int expectedResponseStatus) {
-        String expectedResponseBody = String.format(JSON_POST_RESPONSE,petId,petName);
+    public void assertTheNewPetWasCorrectlyAddedToTheStore(int expectedResponseStatus, List<String> list) {
+        String expectedResponseBody = String.format(JSON_POST_RESPONSE, petId, petName);
         Assert.assertEquals(responseBody, expectedResponseBody);
         Assert.assertEquals(responseStatus, expectedResponseStatus);
+        list.stream().skip(1).forEach((tag) -> Assert.assertTrue(responseBody.contains(tag)));
     }
 
 /*    // Scenario 2
